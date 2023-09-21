@@ -13,6 +13,11 @@ SPIDER_MODULES = ["book_scraper.spiders"]
 NEWSPIDER_MODULE = "book_scraper.spiders"
 
 
+SCRAPE_OPS_API_KEY = 'b2de0a0e-4dae-45d6-8040-868af5396673'
+SCRAPE_OPS_FAKE_USER_AGENT_ENDPOINT = 'https://headers.scrapeops.io/v1/user-agents'
+SCRAPE_OPS_FAKE_USER_AGENT_ENABLED = True
+SCRAPE_OPS_USERAGENTS_COUNT = 50
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "book_scraper (+http://www.yourdomain.com)"
 
@@ -50,9 +55,11 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
+DOWNLOADER_MIDDLEWARES = {
 #    "book_scraper.middlewares.BookScraperDownloaderMiddleware": 543,
-#}
+    "book_scraper.middlewares.FakeUserAgents_ScrapeOps_MiddleWare": 543,
+
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
@@ -62,9 +69,10 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    "book_scraper.pipelines.BookScraperPipeline": 300,
-#}
+ITEM_PIPELINES = {
+    #"book_scraper.pipelines.BookScraperPipeline": 300,
+    "book_scraper.pipelines.DatascraperPipeline": 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
