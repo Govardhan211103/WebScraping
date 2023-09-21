@@ -22,17 +22,17 @@ The purpose of this project is to scrape data related to books from the `booksto
 
 The project has the following structure:
 
-bookscraper/
-├── bookscraper/
-│ ├── spiders/
-│ │ ├── data_spider.py
-│ │ └── init.py
-│ ├── items.py
-│ ├── middlewares.py
-│ ├── pipelines.py
-│ ├── settings.py
-│ └── scrapy.cfg
-└── README.md
+bookscraper/<br>
+├── bookscraper/<br>
+│ ├── spiders/<br>
+│ │ ├── data_spider.py<br>
+│ │ └── init.py<br>
+│ ├── items.py<br>
+│ ├── middlewares.py<br>
+│ ├── pipelines.py<br>
+│ ├── settings.py<br>
+│ └── scrapy.cfg<br>
+└── README.md<br>
 
 
 ## KeyFeatures
