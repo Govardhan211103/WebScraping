@@ -13,7 +13,7 @@ SPIDER_MODULES = ["book_scraper.spiders"]
 NEWSPIDER_MODULE = "book_scraper.spiders"
 
 
-SCRAPE_OPS_API_KEY = 'b2de0a0e-4dae-45d6-8040-868af5396673'
+SCRAPE_OPS_API_KEY = 'SCRAPE_OPS_API_KEY' # paste your api key here
 SCRAPE_OPS_FAKE_USER_AGENT_ENDPOINT = 'https://headers.scrapeops.io/v1/user-agents'
 SCRAPE_OPS_FAKE_USER_AGENT_ENABLED = True
 SCRAPE_OPS_USERAGENTS_COUNT = 50
